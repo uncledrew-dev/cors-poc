@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      fetch("https://e.oppomobile.com/captcha/api/a?w=300&h=144&s=50&ak=43768f2ab87180b2cbe718f62d4bc5fa", {
+        method: "GET",
+        credentials: "include"  // Try with and without this
+      })
+      .then(response => response.text())
+      .then(data => {
+        console.log("CORS test successful!");
+        console.log(data);
+      })
+      .catch(err => {
+        console.error("CORS blocked or error:", err);
+      });
+    </script>
+  </body>
+</html>
